@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import dice from "./images/icon-dice.svg";
+import './App.scss';
+import { useState } from "react";
+import { useEffect } from "react";
 
 function App() {
+
+  const [advice, setAdvice] = useState("");
+
+  const fetchAPIData = () =>{
+    fetch("https://api.adviceslip.com/advice")
+    .then(response =>{
+      return response.json();
+    })
+    .then(data => {
+      setAdvice(data.slip.advice);
+    })
+    // console.log(advice);
+    document.querySelector("h1").innerText = advice;
+  };
+
+  useEffect(()=>{
+    fetchAPIData();
+  },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <article className='advice-gen'>
+      <p>Advice #<span>72</span></p> 
+      <h1>"aking action."</h1>
+      <section className="advice-divider">
+
+      </section>
+      <div onClick={fetchAPIData} className="dice">
+        <img src={dice} alt=""/>
+      </div>
+    </article>
   );
 }
-
 export default App;

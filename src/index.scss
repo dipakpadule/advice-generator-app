@@ -1,0 +1,26 @@
+
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: hsl(150, 100%, 66%);
+
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+
+$Font-size-quote: 28px;
+
+$Family: 'Manrope';
+$bold: 800;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: $Dark-Blue;
+  font-family: $Family;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}

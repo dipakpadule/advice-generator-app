@@ -1,0 +1,67 @@
+
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: #52ffa8;
+
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+
+$Font-size-quote: 28px;
+
+$Family: 'Manrope';
+$bold: 800;
+
+.advice-gen{
+  background: $Dark-Grayish-Blue;
+  margin: 7.5rem 1rem 0rem 1rem;
+  padding: 1rem 1rem;
+  border-radius: 0.62rem;
+  width: 21.44rem;
+  height: 19.69rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  p{
+    color: $Neon-Green;
+  }
+  h1{
+    font-size: $Font-size-quote;
+    font-weight: $bold;
+    color: $Light-Cyan;
+    margin: 1rem 0;
+    width: 18rem;
+    height: 9.37rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .advice-divider{
+    margin-top: 0.8rem;
+    width: 100%;
+    height: 1.2rem;
+    background: url("./images/pattern-divider-mobile.svg");
+    background-size: 100% 1rem;
+    background-repeat: no-repeat;
+  }
+  .dice{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: $Neon-Green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 17.65rem;
+    left: 8.72rem;
+    img{
+      
+    }
+  }
+  .dice:hover{
+    box-shadow: 0px 0px 19px 9px rgba(82,255,168,1);
+    cursor: pointer;
+  }
+}
